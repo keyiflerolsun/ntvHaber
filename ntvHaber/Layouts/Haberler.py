@@ -1,6 +1,6 @@
 # Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
 
-from CLI       import konsol
+from ..CLI     import konsol
 
 from flet.page import Page
 from flet      import (
@@ -20,7 +20,7 @@ from flet      import (
     Divider
 )
 
-from Libs import sondakika_haberleri, bildirim
+from ..Libs import sondakika_haberleri, bildirim
 
 class Haberler(UserControl):
     def __init__(self, sayfa:Page, panel:Page):

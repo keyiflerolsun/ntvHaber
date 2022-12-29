@@ -1,0 +1,45 @@
+# Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
+
+name: KekikAkademi Flatpak Yükleyici
+
+on:
+  push:
+    branches:
+      - "paketlenebilir"
+
+jobs:
+  FlatpakYukleyici:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: ["3.10.8"]
+
+    steps:
+      - name: Depo Kontrolü
+        uses: actions/checkout@v2
+
+      - name: Python ${{ matrix.python-version }} Sürümü Yükleniyor
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Python Sürümünü Göster
+        run: python -c "import sys; print(sys.version)"
+
+      - name: Python Derle
+        run: |
+          python -m pip install --upgrade pip
+          pip install setuptools wheel
+          python3 setup.py bdist_wheel
+
+      - name: Flatpak Derle
+        run: |
+          sudo apt install flatpak flatpak-builder --fix-missing
+          flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
+          flatpak install flathub org.freedesktop.Platform//22.08 org.freedesktop.Sdk//22.08 -y --noninteractive --user
+          flatpak-builder --force-clean build-dir org.kekikakademi.ntvHaber.yml
+
+      - name: Flatpak Yükle
+        run: |
+          echo "Tm"

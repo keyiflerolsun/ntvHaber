@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=ntvHaber
+GenericName=Son Dakika Haberleri
+Comment=NTV Son Dakika Haberleri
+Version=0.2
+Keywords=ntvHaber;KekikAkademi;keyiflerolsun
+Exec=ntvHaber
+Icon=org.kekikakademi.ntvHaber
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=Education;
