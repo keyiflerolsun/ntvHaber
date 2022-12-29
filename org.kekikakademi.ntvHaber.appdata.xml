@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2022 keyiflerolsun -->
+<component>
+  <id type="desktop">org.kekikakademi.ntvHaber.desktop</id>
+  <launchable type="desktop-id">org.kekikakademi.ntvHaber.desktop</launchable>
+  <metadata_license>CC0-1.0</metadata_license>
+  <name>ntvHaber</name>
+  <developer_name>keyiflerolsun</developer_name>
+  <project_license>GPL-3.0</project_license>
+  <summary>Son Dakika Haberleri</summary>
+  <url type="homepage">https://github.com/keyiflerolsun/ntvHaber</url>
+  <description>
+    <p>NTV Son Dakika Haberleri</p>
+  </description>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/keyiflerolsun/ntvHaber/paketlenebilir/Resimler/SS.jpg</image>
+    </screenshot>
+  </screenshots>
+  <releases>
+    <release version="0.2" date="2022-12-29">
+      <description>
+        <p>
+          Initial commit
+        </p>
+      </description>
+    </release>
+  </releases>
+  <content_rating type="oars-1.1"/>
+</component>
