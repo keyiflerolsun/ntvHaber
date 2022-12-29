@@ -45,7 +45,8 @@ setup(
     setup_requires = ["install_freedesktop"],
     data_files     = [
         ("share/icons/hicolor/scalable/apps", ["ntvHaber/Assets/Logo.png"]),
-        ("share/applications", ["org.kekikakademi.ntvHaber.desktop"])
+        ("share/applications", ["org.kekikakademi.ntvHaber.desktop"]),
+        ("share/appdata", ["org.kekikakademi.ntvHaber.appdata.xml"]),
     ],
 
     # ? PyPI Bilgileri
