@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2022 keyiflerolsun -->
-<component>
+<component type="desktop-application">
 
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0</project_license>
@@ -11,95 +11,12 @@
   <name>ntvHaber</name>
   <summary>Son Dakika Haberleri</summary>
   <url type="homepage">https://github.com/keyiflerolsun/ntvHaber</url>
+  <url type="donation">https://keyiflerolsun.me/Kahve</url>
   <developer_name>keyiflerolsun</developer_name>
 
-
   <description>
-
-    <!-- * Markdown 2 HTML -->
-    <h1 id="-ntvhaber">📰 ntvHaber</h1>
-    <p><img src="https://img.shields.io/github/repo-size/keyiflerolsun/ntvHaber" alt="Repo Boyutu">
-    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/keyiflerolsun/ntvHaber&amp;title=Görüntülenme" alt="Görüntülenme">
-    <a href="https://KekikAkademi.org/Kahve" target="_blank"><img src="https://img.shields.io/badge/☕️-Kahve Ismarla-ffdd00" title="☕️ Kahve Ismarla" style="padding-left:5px;"></a>
-    <a href="https://ci.appveyor.com/project/keyiflerolsun/ntvHaber"><img src="https://ci.appveyor.com/api/projects/status/o1351onjr97789ea?svg=true" alt="AppVeyor"></a></p>
-    <p><img src="https://img.shields.io/pypi/pyversions/ntvHaber" alt="PyPI - Python Version">
-    <img src="https://img.shields.io/pypi/status/ntvHaber" alt="PyPI - Status">
-    <img src="https://img.shields.io/pypi/v/ntvHaber" alt="PyPI">
-    <img src="https://img.shields.io/pypi/dm/ntvHaber" alt="PyPI - Downloads">
-    <img src="https://img.shields.io/pypi/wheel/ntvHaber" alt="PyPI - Wheel">
-    <img src="https://img.shields.io/pypi/l/ntvHaber" alt="PyPI - License"></p>
-    <p><strong>Python Yazılımların Python ve Flatpak olarak Paketlenme Örneği</strong></p>
-    <p><em><a href="https://github.com/flet-dev">@flet-dev</a> ile..</em></p>
-    <p><a href="https://www.python.org/"><img src="http://ForTheBadge.com/images/badges/made-with-python.svg" alt="ForTheBadge made-with-python"></a>
-    <a href="https://GitHub.com/keyiflerolsun/"><img src="http://ForTheBadge.com/images/badges/built-with-love.svg" alt="ForTheBadge built-with-love"></a></p>
-    <h2 id="-do-rudan-kullan-m">🚀 Doğrudan Kullanım</h2>
-    <pre><code class="lang-bash">git clone http<span class="hljs-variable">s:</span>//github.<span class="hljs-keyword">com</span>/keyiflerolsun/ntvHaber.git
-    <span class="hljs-keyword">cd</span> ntvHaber
-
-    pip install -Ur requirements.txt
-
-    <span class="hljs-keyword">python</span> basla.<span class="hljs-keyword">py</span>
-    </code></pre>
-    <h2 id="-img-src-https-www-akashtrehan-com-assets-images-emoji-terminal-png-height-42-align-center-manuel-paketleme-se-enekleri"><img src="https://www.akashtrehan.com/assets/images/emoji/terminal.png" height="42" align="center"> Manuel Paketleme Seçenekleri</h2>
-    <h3 id="-python">🐍 Python</h3>
-    <pre><code class="lang-bash">git clone https:<span class="hljs-comment">//github.com/keyiflerolsun/ntvHaber.git</span>
-    cd ntvHaber
-    git checkout paketlenebilir
-
-    <span class="hljs-meta"># Paketle</span>
-    pip install .
-
-    <span class="hljs-meta"># Artıkları Temizle</span>
-    rm -rf build/ dist/ *.egg-info/ .eggs/ &amp;&amp; find . | grep -E <span class="hljs-string">"(__pycache__|\.pyc|\.pyo$)"</span> | xargs rm -rf
-
-    <span class="hljs-meta"># Çalıştır</span>
-    ntvHaber
-
-    <span class="hljs-meta"># Paketi Kaldır</span>
-    pip uninstall ntvHaber
-    </code></pre>
-    <h3 id="-flatpak">📦 Flatpak</h3>
-    <pre><code class="lang-bash">git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span>://github.com/keyiflerolsun/ntvHaber.git
-    cd ntvHaber
-    git checkout paketlenebilir
-
-    <span class="hljs-comment"># Paketle</span>
-    flatpak-builder --<span class="hljs-keyword">user</span> <span class="hljs-title">--install</span> --force-clean build-dir org.kekikakademi.ntvHaber.yml
-
-    <span class="hljs-comment"># Artıkları Temizle</span>
-    rm -rf .flatpak* .vscode build-dir &amp;&amp; find . | grep -E <span class="hljs-string">"(__pycache__|\.pyc|\.pyo$)"</span> | xargs rm -rf
-
-    <span class="hljs-comment"># Çalıştır</span>
-    flatpak run org.kekikakademi.ntvHaber
-
-    <span class="hljs-comment"># Paketi Kaldır</span>
-    flatpak uninstall org.kekikakademi.ntvHaber
-    </code></pre>
-    <h3 id="-bilinen-olumsuzluklar">⚠️ Bilinen Olumsuzluklar</h3>
-    <ul>
-    <li><strong>Flet</strong> varsayılan başlık ve ikonu henüz değişemiyor.<ul>
-    <li><blockquote>
-    <p><a href="https://github.com/flet-dev/flet/discussions/378">https://github.com/flet-dev/flet/discussions/378</a></p>
-    </blockquote>
-    </li>
-    </ul>
-    </li>
-    </ul>
-    <h2 id="-ba-yap">💸 Bağış Yap</h2>
-    <p><strong><a href="https://KekikAkademi.org/Kahve">☕️ Kahve Ismarla</a></strong></p>
-    <h2 id="-telif-hakk-ve-lisans">🌐 Telif Hakkı ve Lisans</h2>
-    <ul>
-    <li><em>Copyright (C) 2022 by</em> <a href="https://github.com/keyiflerolsun">keyiflerolsun</a> ❤️️</li>
-    <li><a href="https://github.com/keyiflerolsun/ntvHaber/blob/master/LICENSE">GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</a> <em>Koşullarına göre lisanslanmıştır..</em></li>
-    </ul>
-    <h2 id="-i-leti-im">♻️ İletişim</h2>
-    <p><em>Benimle iletişime geçmek isterseniz, <strong>Telegram</strong>&#39;dan mesaj göndermekten çekinmeyin;</em> <a href="https://t.me/KekikKahve">@keyiflerolsun</a></p>
-    <p>##</p>
-    <blockquote>
-    <p><strong><a href="https://t.me/KekikAkademi">@KekikAkademi</a></strong> <em>için yazılmıştır..</em></p>
-    </blockquote>
-    <!-- ! Markdown 2 HTML -->
-
+    <p>NTV Son Dakika Haberleri</p>
+    <p>https://t.me/KekikAkademi için hazırlanmıştır..</p>
   </description>
 
 
@@ -109,9 +26,12 @@
     </screenshot>
   </screenshots>
 
+  <categories>
+      <category>Education</category>
+  </categories>
 
   <releases>
-    <release version="0.3" date="2022-12-30">
+    <release version="0.5" date="2022-12-30">
       <description>
         <p>
           FlatHub için hazırlık
