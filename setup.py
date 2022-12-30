@@ -6,7 +6,7 @@ from io         import open
 setup(
     # ? Genel Bilgiler
     name         = "ntvHaber",
-    version      = "0.2",
+    version      = "0.3",
     url          = "https://github.com/keyiflerolsun/ntvHaber",
     description  = "NTV Son Dakika Haberleri",
     keywords     = ["ntvHaber", "KekikAkademi", "keyiflerolsun"],
@@ -44,9 +44,9 @@ setup(
     # ? Masaüstü Paketi
     setup_requires = ["install_freedesktop"],
     data_files     = [
-        ("share/icons/hicolor/scalable/apps", ["ntvHaber/Assets/Logo.png"]),
-        ("share/applications", ["org.kekikakademi.ntvHaber.desktop"]),
-        ("share/appdata", ["org.kekikakademi.ntvHaber.appdata.xml"]),
+        ("share/applications",                ["org.kekikakademi.ntvHaber.desktop"]),
+        ("share/appdata",                     ["org.kekikakademi.ntvHaber.appdata.xml"]),
+        ("share/icons/hicolor/scalable/apps", ["ntvHaber/Assets/Logo.png"])
     ],
 
     # ? PyPI Bilgileri

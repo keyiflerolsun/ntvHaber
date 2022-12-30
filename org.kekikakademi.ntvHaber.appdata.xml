@@ -18,10 +18,17 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="0.2" date="2022-12-29">
+    <release version="0.3" date="2022-12-29">
       <description>
         <p>
-          Initial commit
+          FlatHub için hazırlık
+        </p>
+      </description>
+    </release>
+    <release version="0.1" date="2022-12-29">
+      <description>
+        <p>
+          Proje Başlangıcı
         </p>
       </description>
     </release>
