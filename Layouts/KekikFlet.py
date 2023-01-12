@@ -1,6 +1,6 @@
 # Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
 
-from flet.page import Page
+from flet.page import Page, Event
 
 class KekikFlet:
     def __init__(self, sayfa:Page, baslik:str):
@@ -13,3 +13,11 @@ class KekikFlet:
         sayfa.window_max_width     = 600
 
         self.sayfa = sayfa
+
+        def kapanirken(event:Event):
+            if event.data == "close":
+                self.sayfa.window_destroy()
+
+        self.sayfa.window_prevent_close = True
+        self.sayfa.on_window_event      = kapanirken
+        self.sayfa.update()

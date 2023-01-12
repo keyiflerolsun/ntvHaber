@@ -1,8 +1,16 @@
 pip
 setuptools
 wheel
+
+install-freedesktop
+
 rich
+
+pdm
+pdm-pep517
 flet
+
 notify-py
 requests
+
 pyinstaller
