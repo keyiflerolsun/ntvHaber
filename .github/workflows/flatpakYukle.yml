@@ -35,7 +35,8 @@ jobs:
 
       - name: Flatpak Derle
         run: |
-          sudo apt install flatpak flatpak-builder --fix-missing
+          sudo apt update && sudo apt upgrade -y
+          sudo apt install -y flatpak flatpak-builder --fix-missing
           flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
           flatpak install flathub org.freedesktop.Platform//22.08 org.freedesktop.Sdk//22.08 -y --noninteractive --user
           flatpak-builder --force-clean build-dir org.kekikakademi.ntvHaber.yml

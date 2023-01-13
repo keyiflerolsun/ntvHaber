@@ -36,16 +36,10 @@
   </categories>
 
   <releases>
-    <release version="1.0" date="2023-01-13"/>
+    <release version="1.01" date="2023-01-13"/>
     <release version="0.9" date="2023-01-12"/>
     <release version="0.8" date="2023-01-02"/>
-    <release version="0.6" date="2022-12-30">
-      <description>
-        <p>
-          FlatHub için hazırlık
-        </p>
-      </description>
-    </release>
+    <release version="0.6" date="2022-12-30"/>
     <release version="0.1" date="2022-12-29">
       <description>
         <p>
