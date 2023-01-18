@@ -9,20 +9,20 @@
   <launchable type="desktop-id">org.kekikakademi.ntvHaber.desktop</launchable>
 
   <name>ntvHaber</name>
-  <summary>NTV.com.tr sitesinden Son Dakika Haberleri</summary>
-  <summary xml:lang="en_US">Breaking News in Turkish from NTV.com.tr</summary>
+  <summary>Breaking News in Turkish from NTV.com.tr</summary>
+  <summary xml:lang="tr_TR">NTV.com.tr sitesinden Son Dakika Haberleri</summary>
   <url type="homepage">https://github.com/keyiflerolsun/ntvHaber</url>
   <url type="donation">https://keyiflerolsun.me/Kahve</url>
   <developer_name>keyiflerolsun</developer_name>
 
   <description>
-    <p>NTV Son Dakika Haberleri</p>
-    <p>https://t.me/KekikAkademi için hazırlanmıştır..</p>
-  </description>
-
-  <description xml:lang="en_US">
     <p>Breaking News in Turkish from NTV.com.tr</p>
     <p>An example application prepared with Python language and Flet Library.</p>
+  </description>
+
+  <description xml:lang="tr_TR">
+    <p>NTV Son Dakika Haberleri</p>
+    <p>https://t.me/KekikAkademi için hazırlanmıştır..</p>
   </description>
 
   <screenshots>
@@ -36,7 +36,8 @@
   </categories>
 
   <releases>
-    <release version="1.01" date="2023-01-13"/>
+    <release version="1.3" date="2023-01-18"/>
+    <release version="1.1" date="2023-01-13"/>
     <release version="0.9" date="2023-01-12"/>
     <release version="0.8" date="2023-01-02"/>
     <release version="0.6" date="2022-12-30"/>
