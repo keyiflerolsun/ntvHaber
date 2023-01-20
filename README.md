@@ -1,13 +1,13 @@
 # 📰 ntvHaber
 
-![Repo Boyutu](https://img.shields.io/github/repo-size/keyiflerolsun/ntvHaber)
+![Repo Boyutu](https://img.shields.io/github/repo-size/keyiflerolsun/ntvHaber?logo=git&logoColor=white)
 ![Görüntülenme](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/keyiflerolsun/ntvHaber&title=Görüntülenme)
 <a href="https://KekikAkademi.org/Kahve" target="_blank"><img src="https://img.shields.io/badge/☕️-Kahve Ismarla-ffdd00" title="☕️ Kahve Ismarla" style="padding-left:5px;"></a>
 [![AppVeyor](https://ci.appveyor.com/api/projects/status/o1351onjr97789ea?svg=true)](https://ci.appveyor.com/project/keyiflerolsun/ntvHaber)
 
 ![Python Version](https://img.shields.io/pypi/pyversions/ntvHaber?logo=python&logoColor=white)
-![License](https://img.shields.io/pypi/l/ntvHaber)
-![Status](https://img.shields.io/pypi/status/ntvHaber)
+![License](https://img.shields.io/pypi/l/ntvHaber?logo=gnu&logoColor=white)
+![Status](https://img.shields.io/pypi/status/ntvHaber?logo=windowsterminal&logoColor=white)
 
 ![PyPI](https://img.shields.io/pypi/v/ntvHaber?logo=pypi&logoColor=white)
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/ntvHaber?logo=pypi&logoColor=white)
