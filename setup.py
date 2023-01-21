@@ -6,7 +6,7 @@ from io         import open
 setup(
     # ? Genel Bilgiler
     name         = "ntvHaber",
-    version      = "1.4",
+    version      = "1.5",
     url          = "https://github.com/keyiflerolsun/ntvHaber",
     description  = "NTV Son Dakika Haberleri",
     keywords     = ["ntvHaber", "KekikAkademi", "keyiflerolsun"],
@@ -28,10 +28,17 @@ setup(
         "pip",
         "setuptools",
         "wheel",
+        "install-freedesktop",
         "rich",
+        "pdm",
+        "pdm-pep517",
         "flet",
+        "pystray",
+        "Pillow",
         "notify-py",
-        "requests"
+        "requests",
+        "APScheduler",
+        "parsel"
     ],
 
     # ? Konsoldan Çalıştırılabilir

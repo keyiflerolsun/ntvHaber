@@ -10,7 +10,9 @@ class KekikFlet:
         sayfa.theme_mode           = "dark"
         sayfa.scroll               = "adaptive"
         # sayfa.auto_scroll          = True
+
         sayfa.window_max_width     = 600
+        sayfa.window_skip_task_bar = True
 
         self.sayfa = sayfa
 

@@ -18,6 +18,8 @@ finish-args:
   - --share=network
   # ? PulseAudio Kullanarak Sesleri Çal
   - --socket=pulseaudio
+  # ? Bildirim Erişim İzni
+  - --talk-name=org.freedesktop.Notifications
 
 modules:
 # - python3-requirements.json

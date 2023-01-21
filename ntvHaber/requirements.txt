@@ -10,5 +10,11 @@ pdm
 pdm-pep517
 flet
 
+pystray
+Pillow
 notify-py
+
 requests
+
+APScheduler
+parsel
