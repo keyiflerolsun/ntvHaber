@@ -24,3 +24,7 @@ def bildirim(baslik:str, icerik:str):
     _bildirim.message = icerik
 
     _bildirim.send(block=False)
+
+from apscheduler.schedulers.background import BackgroundScheduler
+
+zamanlayici = BackgroundScheduler(timezone="Europe/Istanbul", job_defaults={"misfire_grace_time": 15*60})
