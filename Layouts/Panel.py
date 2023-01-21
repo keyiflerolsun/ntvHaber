@@ -1,7 +1,7 @@
 # Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
 
 from flet.page import Page
-from flet      import UserControl, Container, Column, Row, Text, ProgressRing, colors
+from flet      import UserControl, Container, Column, Row, Text, ProgressRing, colors, Divider
 
 class Panel(UserControl):
     def __init__(self, sayfa:Page):
@@ -15,10 +15,14 @@ class Panel(UserControl):
     def build(self):
         return Container(
             Column(
-                [
+                width    = 500,
+                controls = [
                     Row([self.baslik],      alignment="center"),
+                    Divider(),
                     Row([self.araniyor],    alignment="center"),
-                    Row([self.cikti_alani], alignment="center")
+                    Row([self.cikti_alani], alignment="center"),
+                    Row(),
+                    Divider()
                 ]
             )
         )
