@@ -7,7 +7,8 @@ from flet      import app as flet
 from flet.page import Page
 
 import pystray
-from PIL import Image
+from PIL  import Image
+from Libs import dosya_ver
 
 from Layouts import KekikFlet, Panel, Haberler
 from os      import name as sistem
@@ -40,7 +41,7 @@ def ana_sayfa(sayfa:Page):
 
     simge_durum = pystray.Icon(
         name  = sayfa.title,
-        icon  = Image.open("Assets/Logo.png"),
+        icon  = Image.open(dosya_ver("Assets/Logo.png", 2)),
         title = sayfa.title,
         menu  = pystray.Menu(
             pystray.MenuItem("Göster", __goster),

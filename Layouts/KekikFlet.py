@@ -12,7 +12,7 @@ class KekikFlet:
         # sayfa.auto_scroll          = True
 
         sayfa.window_max_width     = 600
-        sayfa.window_skip_task_bar = True
+        # sayfa.window_skip_task_bar = True
 
         self.sayfa = sayfa
 

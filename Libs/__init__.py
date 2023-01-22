@@ -1,23 +1,21 @@
 # Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
 
-from Libs.NTV import sondakika_haberleri
-from notifypy import Notify
-from os       import name as sistem
-from pathlib  import Path
+from Libs.NTV   import sondakika_haberleri
+from notifypy   import Notify
+import os
+
+ust_dizin_ver = lambda _path, n: os.sep.join(_path.split(os.sep)[:-n])
+
+def dosya_ver(dosya_yolu:str, ust_dizin:int):
+    return os.path.join(ust_dizin_ver(__file__, ust_dizin), dosya_yolu)
 
 def bildirim(baslik:str, icerik:str):
-
-    # calisma_dizini = Path(__file__).parent.resolve()
-
-    # calisma_dizini = Path(__file__).parents[1]
-    # ayrac          = "/" if sistem != "nt" else "\\"
-    # logo_yolu      = f"{calisma_dizini}{ayrac}Assets{ayrac}Logo.png"
 
     _bildirim = Notify()
     _bildirim._notification_application_name = "ntvHaber | @KekikAkademi"
     _bildirim._notification_icon             = "Assets/Logo.png"
 
-    if sistem == "nt":
+    if os.name == "nt":
         _bildirim.icon = "Assets/Logo.png"
 
     _bildirim.title   = baslik
