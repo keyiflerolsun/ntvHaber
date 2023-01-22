@@ -3,22 +3,22 @@
 from ..Libs.NTV import sondakika_haberleri
 from notifypy   import Notify
 from os         import name as sistem
-from pathlib    import Path
+from .dosya_ver import get_resource
 
 def bildirim(baslik:str, icerik:str):
 
     # calisma_dizini = Path(__file__).parent.resolve()
 
-    calisma_dizini = Path(__file__).parents[1]
-    ayrac          = "/" if sistem != "nt" else "\\"
-    logo_yolu      = f"{calisma_dizini}{ayrac}Assets{ayrac}Logo.png"
+    # calisma_dizini = Path(__file__).parents[1]
+    # ayrac          = "/" if sistem != "nt" else "\\"
+    # logo_yolu      = f"{calisma_dizini}{ayrac}Assets{ayrac}Logo.png"
 
     _bildirim = Notify()
     _bildirim._notification_application_name = "ntvHaber | @KekikAkademi"
-    _bildirim._notification_icon             = logo_yolu
+    _bildirim._notification_icon             = get_resource("Assets/Logo.png")
 
     if sistem == "nt":
-        _bildirim.icon = logo_yolu
+        _bildirim.icon = get_resource("Assets/Logo.png")
 
     _bildirim.title   = baslik
     _bildirim.message = icerik
