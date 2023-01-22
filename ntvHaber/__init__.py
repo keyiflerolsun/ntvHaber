@@ -7,7 +7,8 @@ from flet      import app as flet
 from flet.page import Page
 
 import pystray
-from PIL import Image
+from PIL     import Image
+from pathlib import Path
 
 from .Layouts import KekikFlet, Panel, Haberler
 from os       import name as sistem
@@ -38,9 +39,12 @@ def ana_sayfa(sayfa:Page):
         sayfa.window_minimized = True
         sayfa.update()
 
+    calisma_dizini = Path(__file__).parents[0]
+    ayrac          = "/" if sistem != "nt" else "\\"
+
     simge_durum = pystray.Icon(
         name  = sayfa.title,
-        icon  = Image.open("Assets/Logo.png"),
+        icon  = Image.open(f"{calisma_dizini}{ayrac}Assets{ayrac}Logo.png"),
         title = sayfa.title,
         menu  = pystray.Menu(
             pystray.MenuItem("Göster", __goster),
