@@ -1,10 +1,9 @@
 # Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
 
-from CLI       import cikis_yap, hata_yakala
+from CLI  import cikis_yap, hata_yakala
 
-from flet      import FLET_APP, WEB_BROWSER
-from flet      import app as flet
-from flet.page import Page
+from flet import Page, FLET_APP, WEB_BROWSER
+from flet import app as flet
 
 import pystray
 from PIL  import Image

@@ -1,6 +1,7 @@
 # Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
 
-from flet.page import Page, Event
+from flet            import Page
+from flet_core.event import Event
 
 class KekikFlet:
     def __init__(self, sayfa:Page, baslik:str):
@@ -11,7 +12,8 @@ class KekikFlet:
         sayfa.scroll               = "adaptive"
         # sayfa.auto_scroll          = True
 
-        sayfa.window_max_width     = 600
+        sayfa.window_width     = 600
+        sayfa.window_max_width = 600
         # sayfa.window_skip_task_bar = True
 
         self.sayfa = sayfa

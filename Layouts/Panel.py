@@ -1,7 +1,6 @@
 # Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
 
-from flet.page import Page
-from flet      import UserControl, Container, Column, Row, Text, ProgressRing, colors, Divider
+from flet import Page, UserControl, Container, Column, Row, Text, ProgressRing, colors, Divider
 
 class Panel(UserControl):
     def __init__(self, sayfa:Page):
