@@ -22,7 +22,7 @@ def sondakika_haberleri() -> list:
 
     global RAMBASE
 
-    istek    = get("https://kolektifapi.kekikakademi.org/haber")
+    istek    = get("https://kolektifapi.kekikakademi.org/haber", headers={"User-Agent": "org.kekikakademi.ntvHaber"})
     haberler = istek.json()["veri"]
 
     detay_sor = []
