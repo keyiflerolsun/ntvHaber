@@ -37,6 +37,9 @@ jobs:
           echo "PAKET_V=$PAKET_V" >> $GITHUB_ENV
           echo "PAKET_ADI=$PAKET_ADI" >> $GITHUB_ENV
 
+          echo "Paket Adı: $PAKET_ADI"
+          echo "Paket Sürümü: $PAKET_V"
+
       - name: Paketle
         run: |
           mv Shared/*.yml . && mv Shared/SRC .
@@ -50,17 +53,17 @@ jobs:
       - name: Paketi GitHub'a Yükle
         uses: actions/upload-artifact@v3
         with:
-          name: $PAKET_ADI
-          path: ./$PAKET_ADI.flatpak
+          name: ${{ env.PAKET_ADI }}
+          path: ./${{ env.PAKET_ADI }}.flatpak
 
       - name: GitHub Release Oluştur
         uses: softprops/action-gh-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: $PAKET_V
-          body: 🚀 $PAKET_ADI GitHub tarafından $PAKET_V'e Otomatik olarak derlendi..
+          tag_name: ${{ env.PAKET_V }}
+          body: 🚀 ${{ env.PAKET_ADI }} GitHub tarafından ${{ env.PAKET_V }}'e Otomatik olarak derlendi..
           draft: false
           prerelease: false
           files: |
-            ./$PAKET_ADI.flatpak
+            ./${{ env.PAKET_ADI }}.flatpak
