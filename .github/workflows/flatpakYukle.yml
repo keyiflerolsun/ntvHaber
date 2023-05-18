@@ -22,8 +22,11 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install setuptools wheel pyyaml
-          sudo apt-get update -qq
+          sudo apt update && sudo apt upgrade -y
           sudo apt install -y flatpak flatpak-builder --fix-missing
+          flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo --user
+          flatpak remote-add --if-not-exists flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo --user
+          flatpak update && flatpak upgrade
           flatpak install flathub org.freedesktop.{Platform,Sdk}//22.08 -y --noninteractive --user
 
       - name: Paketle
