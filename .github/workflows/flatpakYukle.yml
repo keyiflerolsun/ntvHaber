@@ -19,7 +19,7 @@ jobs:
           python-version: "3.10.8"
 
       - name: Gereksinimleri Yükle
-        run: |
+        run : |
           python -m pip install --upgrade pip
           pip install setuptools wheel pyyaml
           sudo apt update -qq
@@ -30,7 +30,7 @@ jobs:
           flatpak install flathub org.freedesktop.{Platform,Sdk}//22.08 -y --noninteractive --user
 
       - name: Değişkenleri Ayarla
-        run: |
+        run : |
           PAKET_V=$(cat setup.py | grep -oP "(?<=version      = \").*?(?=\")")
           PAKET_ADI=$(cat setup.py | sed -n 's/.*"\(Shared\/\([^"]*\)\.desktop\)".*/\2/p')
 
@@ -41,13 +41,13 @@ jobs:
           echo "Paket Sürümü: $PAKET_V"
 
       - name: Paketle
-        run: |
+        run : |
           mv Shared/*.yml . && mv Shared/SRC .
           flatpak-builder --repo=github --force-clean build-dir $PAKET_ADI.yml
           flatpak build-bundle github $PAKET_ADI.flatpak $PAKET_ADI
 
       - name: Artıkları Temizle
-        run: |
+        run : |
           rm -rf .flatpak* .vscode build-dir && find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf
 
       - name: Paketi GitHub'a Yükle
@@ -58,12 +58,12 @@ jobs:
 
       - name: GitHub Release Oluştur
         uses: softprops/action-gh-release@v1
-        env:
+        env :
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ env.PAKET_V }}
-          body: 🚀 ${{ env.PAKET_ADI }} GitHub tarafından ${{ env.PAKET_V }}'e Otomatik olarak derlendi..
-          draft: false
-          prerelease: false
-          files: |
+          tag_name   : ${{ env.PAKET_V }}
+          body       : 🚀 **${{ env.PAKET_ADI }}** _GitHub tarafından_ `${{ env.PAKET_V }}`'e _Otomatik olarak derlendi.._
+          draft      : false
+          prerelease : false
+          files      : |
             ./${{ env.PAKET_ADI }}.flatpak
