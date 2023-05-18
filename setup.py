@@ -6,7 +6,7 @@ from io         import open
 setup(
     # ? Genel Bilgiler
     name         = "ntvHaber",
-    version      = "1.3.0",
+    version      = "1.30.0",
     url          = "https://github.com/keyiflerolsun/ntvHaber",
     description  = "NTV Son Dakika Haberleri",
     keywords     = ["ntvHaber", "KekikAkademi", "keyiflerolsun"],
@@ -29,7 +29,6 @@ setup(
         "wheel",
         "install-freedesktop",
         "rich",
-        "poetry",
         "flet",
         "pystray",
         "Pillow",

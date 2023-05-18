@@ -1,0 +1,16 @@
+setuptools
+wheel
+
+install-freedesktop
+
+rich
+
+flet
+
+pystray
+Pillow
+notify-py
+
+requests
+parsel
+APScheduler

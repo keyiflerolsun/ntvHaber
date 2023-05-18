@@ -2,7 +2,7 @@
 Name=ntvHaber
 GenericName=Son Dakika Haberleri
 Comment=NTV Son Dakika Haberleri
-Version=1.3.0
+Version=1.30.0
 Keywords=ntvHaber;KekikAkademi;keyiflerolsun
 Exec=ntvHaber
 Icon=org.kekikakademi.ntvHaber
