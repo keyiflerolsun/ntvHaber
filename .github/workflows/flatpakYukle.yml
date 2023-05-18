@@ -25,7 +25,6 @@ jobs:
           sudo apt-get update -qq
           sudo apt install -y flatpak flatpak-builder --fix-missing
           sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-          sudo flatpak remote-add --if-not-exists flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo
           sudo flatpak update && flatpak upgrade
           sudo flatpak install flathub org.freedesktop.{Platform,Sdk}//22.08 -y --noninteractive --user
 
