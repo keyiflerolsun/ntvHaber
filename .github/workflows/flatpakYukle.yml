@@ -1,0 +1,39 @@
+# Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
+
+name: Flatpak Yükleyici
+
+on: [push, pull_request]
+
+jobs:
+  FlatpakYukleyici:
+    name    : Flatpak Yükleyici
+    runs-on : ubuntu-latest
+
+    steps:
+      - name: Depo Kontrolü
+        uses: actions/checkout@v3
+
+      - name: Gereksinimleri Yükle
+        run: |
+          sudo apt update && sudo apt upgrade -y
+          sudo apt install -y flatpak flatpak-builder --fix-missing
+          flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+          flatpak remote-add --if-not-exists flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo
+          flatpak update && flatpak upgrade
+          flatpak install flathub org.freedesktop.{Platform,Sdk}//22.08 -y --noninteractive --user
+
+      - name: Paketle
+        run: |
+          mv Shared/*.yml . && mv Shared/SRC .
+          flatpak-builder --repo=github --force-clean build-dir org.kekikakademi.ntvHaber.yml
+          flatpak build-bundle github org.kekikakademi.ntvHaber.flatpak org.kekikakademi.ntvHaber
+
+      - name: Artıkları Temizle
+        run: |
+          rm -rf .flatpak* .vscode build-dir && find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf
+
+      - name: Paketi GitHub'a Yükle
+        uses: actions/upload-artifact@v3
+        with:
+          name: org.kekikakademi.ntvHaber.flatpak
+          path: ./org.kekikakademi.ntvHaber.flatpak
