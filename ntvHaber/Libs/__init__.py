@@ -1,6 +1,6 @@
 # Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
 
-from Libs.NTV   import sondakika_haberleri
+from ..Libs.NTV import sondakika_haberleri
 from notifypy   import Notify
 import os
 
@@ -13,10 +13,10 @@ def bildirim(baslik:str, icerik:str):
 
     _bildirim = Notify()
     _bildirim._notification_application_name = "ntvHaber | @KekikAkademi"
-    _bildirim._notification_icon             = "Assets/Logo.png"
+    _bildirim._notification_icon             = dosya_ver("Assets/Logo.png", 2)
 
     if os.name == "nt":
-        _bildirim.icon = "Assets/Logo.png"
+        _bildirim.icon = dosya_ver("Assets/Logo.png", 2)
 
     _bildirim.title   = baslik
     _bildirim.message = icerik

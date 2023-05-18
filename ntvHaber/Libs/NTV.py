@@ -1,6 +1,6 @@
 # Bu Araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
 
-from CLI      import konsol
+from ..CLI    import konsol
 from requests import get
 from parsel   import Selector
 

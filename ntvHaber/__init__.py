@@ -1,17 +1,17 @@
 # Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
 
-from CLI  import cikis_yap, hata_yakala
+from .CLI import cikis_yap, hata_yakala
 
 from flet import Page, FLET_APP, WEB_BROWSER
 from flet import app as flet
 
 import pystray
-from PIL  import Image
-from Libs import dosya_ver
+from PIL   import Image
+from .Libs import dosya_ver
 
-from Layouts import KekikFlet, Panel, Haberler
-from os      import name as sistem
-from Libs    import zamanlayici
+from .Layouts import KekikFlet, Panel, Haberler
+from os       import name as sistem
+from .Libs    import zamanlayici
 
 ZAMANLA = False
 
@@ -51,7 +51,8 @@ def ana_sayfa(sayfa:Page):
     simge_durum.run()
 
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
+def basla():
     try:
         zamanlayici.start()
         flet(target=ana_sayfa, view=FLET_APP if sistem != "nt" else WEB_BROWSER, port=1927, assets_dir="Assets")

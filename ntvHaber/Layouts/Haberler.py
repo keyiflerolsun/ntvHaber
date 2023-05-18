@@ -1,8 +1,8 @@
 # Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
 
-from CLI  import konsol
-from flet import Page, UserControl, GridView, Container, Column, Text, colors, border, ImageFit 
-from Libs import sondakika_haberleri, bildirim
+from ..CLI  import konsol
+from flet   import Page, UserControl, GridView, Container, Column, Text, colors, border, ImageFit 
+from ..Libs import sondakika_haberleri, bildirim
 
 class Haberler(UserControl):
     def __init__(self, sayfa:Page, panel:Page):
