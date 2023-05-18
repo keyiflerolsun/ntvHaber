@@ -42,5 +42,12 @@ jobs:
       - name: Paketi GitHub'a Yükle
         uses: actions/upload-artifact@v3
         with:
-          name: org.kekikakademi.ntvHaber.flatpak
+          name: org.kekikakademi.ntvHaber
           path: ./org.kekikakademi.ntvHaber.flatpak
+
+      - name: GitHub Release Oluştur
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          files: ./org.kekikakademi.ntvHaber.flatpak
