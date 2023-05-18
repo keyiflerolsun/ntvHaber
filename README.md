@@ -13,6 +13,7 @@
 [![PyPI - Wheel](https://img.shields.io/pypi/wheel/ntvHaber?logo=pypi&logoColor=white)](https://pypi.org/project/ntvHaber)
 
 [![PyPI Yükle](https://github.com/keyiflerolsun/ntvHaber/actions/workflows/pypiYukle.yml/badge.svg)](https://github.com/keyiflerolsun/ntvHaber/actions/workflows/pypiYukle.yml)
+[![Flatpak Yükle](https://github.com/keyiflerolsun/ntvHaber/actions/workflows/flatpakYukle.yml/badge.svg)](https://github.com/keyiflerolsun/ntvHaber/actions/workflows/flatpakYukle.yml)
 
 [![FlatHub](https://img.shields.io/flathub/v/org.kekikakademi.ntvHaber?logo=flathub&logoColor=white)](https://flathub.org/tr/apps/org.kekikakademi.ntvHaber)
 [![FlatHub - Downloads](https://img.shields.io/flathub/downloads/org.kekikakademi.ntvHaber?logo=flathub&logoColor=white)](https://flathub.org/tr/apps/org.kekikakademi.ntvHaber)
