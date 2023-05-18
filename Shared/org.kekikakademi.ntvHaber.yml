@@ -22,7 +22,8 @@ finish-args:
   - --talk-name=org.freedesktop.Notifications
 
 modules:
-- SRC/python3-requirements.yaml
+# * Kurulumda İnternet Olduğu için Gereksiz
+# - SRC/python3-requirements.yaml
 
 - name: ntvHaber-yukleyici
   buildsystem: simple
@@ -32,6 +33,16 @@ modules:
     - install -Dm644 Shared/org.kekikakademi.ntvHaber.svg /app/share/icons/hicolor/scalable/apps/org.kekikakademi.ntvHaber.svg
     - python3 -m pip install . --prefix=${FLATPAK_DEST}
 
+ # * Lokal Kurulum (İnternet Erişimi Var)
+  build-options:
+    build-args:
+      - "--share=network"
   sources:
     - type: dir
       path: "."
+
+  # ! FlatHub Kurulum (İnternet Erişimi Yok)
+  # sources:
+  #   - type: git
+  #     url: https://github.com/keyiflerolsun/BTKSorgu.git
+  #     commit: 48dec866986d3b5304d3dd07ad61dd16bb98dc4c

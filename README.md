@@ -100,7 +100,7 @@ git clone https://github.com/keyiflerolsun/ntvHaber.git
 cd ntvHaber
 
 # Dosyaları al
-mv Shared/* . && rm -rf Shared
+mv Shared/*.yml . && mv Shared/SRC .
 
 # Gerekli Ortamları Kur
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
